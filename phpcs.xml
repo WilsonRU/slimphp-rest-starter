@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+
+    <arg name="basepath" value="."/>
+    <arg name="cache" value=".phpcs-cache"/>
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+    <arg name="parallel" value="80"/>
+
+    <!-- Show progress -->
+    <arg value="p"/>
+
+    <exclude-pattern>src/Rest</exclude-pattern>
+
+    <!-- Paths to check -->
+    <file>src</file>
+    <file>test</file>
+
+    <!-- Include all rules from the Laminas Coding Standard -->
+    <rule ref="LaminasCodingStandard">
+        <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedName"/>
+        <exclude name="WebimpressCodingStandard.NamingConventions.Trait"/>
+        <exclude name="WebimpressCodingStandard.NamingConventions.Interface"/>
+        <exclude name="WebimpressCodingStandard.NamingConventions.Exception"/>
+        <exclude name="WebimpressCodingStandard.NamingConventions.AbstractClass"/>
+        <exclude name="WebimpressCodingStandard.PHP.ImportInternalConstant"/>
+        <exclude name="WebimpressCodingStandard.PHP.ImportInternalFunction"/>
+        <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFallbackGlobalName"/>
+        <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation"/>
+        <exclude name="Generic.Files.LineEndings.InvalidEOLChar"/>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingAnyTypeHint">
+        <exclude-pattern>src/Core/Infrastructure/Doctrine/DateFromDatabaseConverter.php</exclude-pattern>
+        <exclude-pattern>src/**/DateToDatabaseConverter.php</exclude-pattern>
+        <exclude-pattern>src/CartaoCidadao/Campanha/Infrastructure/Filesystem/CampanhaUploadCsv.php</exclude-pattern>
+        <exclude-pattern>src/CartaoCidadao/Cidadao/Infrastructure/Filesystem/CartaoCidadaoSaver.php</exclude-pattern>
+        <exclude-pattern>src/**/Listener</exclude-pattern>
+        <exclude-pattern>src/**/Dispatcher.php</exclude-pattern>
+        <exclude-pattern>src/**/DateFormatter.php</exclude-pattern>
+        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/RouterTypes.php</exclude-pattern>
+        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/MainTypes.php</exclude-pattern>
+        <exclude-pattern>src/**/DoctrineODM/Type</exclude-pattern>
+        <exclude-pattern>src/Aplicativo/Domain/ValueObject/Data.php</exclude-pattern>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint">
+        <exclude-pattern>src/**/DateFormatter.php</exclude-pattern>
+        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/MainTypes.php</exclude-pattern>
+        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/RouterTypes.php</exclude-pattern>
+        <exclude-pattern>src/Aplicativo/Domain/ValueObject/Data.php</exclude-pattern>
+        <exclude-pattern>src/Core/Infrastructure/InternalFunction/Doctrine/RemoveAcento.php</exclude-pattern>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingAnyTypeHint">
+        <exclude-pattern>src/**/DateFormatter.php</exclude-pattern>
+        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/RouterTypes.php</exclude-pattern>
+        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/MainTypes.php</exclude-pattern>
+        <exclude-pattern>src/**/DoctrineODM/Type</exclude-pattern>
+        <exclude-pattern>src/Aplicativo/Domain/Entity/Usuario.php</exclude-pattern>
+        <exclude-pattern>src/Aplicativo/Domain/ValueObject/Data.php</exclude-pattern>
+        <exclude-pattern>src/Core/Infrastructure/InternalFunction/Doctrine/RemoveAcento.php</exclude-pattern>
+    </rule>
+</ruleset>
