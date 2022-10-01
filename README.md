@@ -1,5 +1,7 @@
 # Backend
 
+´Esse Projeto precisa de correções de bugs´
+
 ### Requisitos
 
 - [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
