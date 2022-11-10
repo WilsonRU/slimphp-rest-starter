@@ -1,7 +1,3 @@
-# Backend
-
-´Esse Projeto precisa de correções de bugs´
-
 ### Requisitos
 
 - [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
@@ -19,7 +15,7 @@
     
 - Instalando dependencias
    
-   `docker-compose run --rm php-fpm composer install`
+    `docker-compose run --rm php-fpm composer install`
    
 - Executando as migrations do banco de dados
 
@@ -27,12 +23,12 @@
 
 - Criando uma migration para banco de dados
 
-  `docker-compose run --rm php-fpm vendor/bin/phinx create nomeMigration`
+    `docker-compose run --rm php-fpm vendor/bin/phinx create nomeMigration`
 
 - Executar PHPUnit e PHPStan
 
-  `docker-compose run --rm php-fpm composer check`
+    `docker-compose run --rm php-fpm composer check`
 
 - Executar CodeSniffer
 
-  `docker-compose run --rm php-fpm composer cs-fix`
+    `docker-compose run --rm php-fpm composer cs-fix`

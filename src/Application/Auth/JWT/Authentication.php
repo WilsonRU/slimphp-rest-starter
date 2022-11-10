@@ -28,9 +28,9 @@ class Authentication implements AuthenticationInterface
     public function generateToken(Usuario $user): string
     {
         return $this->config->builder()
-            ->issuedBy('blog')
+            ->issuedBy('auth')
             ->identifiedBy((string) $user->getId())
-            ->permittedFor('blog')
+            ->permittedFor('auth')
             ->getToken($this->config->signer(), $this->config->signingKey())
             ->toString();
     }

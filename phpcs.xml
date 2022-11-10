@@ -30,33 +30,8 @@
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation"/>
         <exclude name="Generic.Files.LineEndings.InvalidEOLChar"/>
     </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingAnyTypeHint">
-        <exclude-pattern>src/Core/Infrastructure/Doctrine/DateFromDatabaseConverter.php</exclude-pattern>
-        <exclude-pattern>src/**/DateToDatabaseConverter.php</exclude-pattern>
-        <exclude-pattern>src/CartaoCidadao/Campanha/Infrastructure/Filesystem/CampanhaUploadCsv.php</exclude-pattern>
-        <exclude-pattern>src/CartaoCidadao/Cidadao/Infrastructure/Filesystem/CartaoCidadaoSaver.php</exclude-pattern>
-        <exclude-pattern>src/**/Listener</exclude-pattern>
-        <exclude-pattern>src/**/Dispatcher.php</exclude-pattern>
-        <exclude-pattern>src/**/DateFormatter.php</exclude-pattern>
-        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/RouterTypes.php</exclude-pattern>
-        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/MainTypes.php</exclude-pattern>
-        <exclude-pattern>src/**/DoctrineODM/Type</exclude-pattern>
-        <exclude-pattern>src/Aplicativo/Domain/ValueObject/Data.php</exclude-pattern>
-    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingAnyTypeHint"></rule>
     <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingAnyTypeHint">
-        <exclude-pattern>src/**/DateFormatter.php</exclude-pattern>
-        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/MainTypes.php</exclude-pattern>
-        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/RouterTypes.php</exclude-pattern>
-        <exclude-pattern>src/Aplicativo/Domain/ValueObject/Data.php</exclude-pattern>
-        <exclude-pattern>src/Core/Infrastructure/InternalFunction/Doctrine/RemoveAcento.php</exclude-pattern>
     </rule>
-    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingAnyTypeHint">
-        <exclude-pattern>src/**/DateFormatter.php</exclude-pattern>
-        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/RouterTypes.php</exclude-pattern>
-        <exclude-pattern>src/Core/Application/GraphQL/MainTypes/MainTypes.php</exclude-pattern>
-        <exclude-pattern>src/**/DoctrineODM/Type</exclude-pattern>
-        <exclude-pattern>src/Aplicativo/Domain/Entity/Usuario.php</exclude-pattern>
-        <exclude-pattern>src/Aplicativo/Domain/ValueObject/Data.php</exclude-pattern>
-        <exclude-pattern>src/Core/Infrastructure/InternalFunction/Doctrine/RemoveAcento.php</exclude-pattern>
-    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingAnyTypeHint"></rule>
 </ruleset>
